@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.sql.*;
 
@@ -30,7 +31,8 @@ public class HelloController {
     @FXML
     private TableColumn tablecolumn_Caisse, tablecolumn_NAVS, tablecolumn_Nom, tablecolumn_Prenom, tablecolumn_DOB, tablecolumn_Sexe;
     @FXML
-    private TableView tableview_Members;
+    private TableView<TVMembers> tableview_Members;
+//    TableView<TVMembers> tableview_Members = new TableView<tvMembers>();
     @FXML
     private VBox vbox_fragment1;
 
@@ -107,6 +109,8 @@ public class HelloController {
         tablecolumn_Sexe.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("sex"));
         //add data to table
         tableview_Members.setItems(data);
+
+
     }
 
     String userrole, AccStatus = "";
@@ -200,5 +204,23 @@ public class HelloController {
         vbox_fragment1.getChildren().setAll(vBoxf4);
     }
 
-    //
+    @FXML
+    public void clickItem(MouseEvent event)
+    {
+        if (event.getClickCount() == 2) //Checking double click
+        {
+            System.out.println(tableview_Members.getSelectionModel().getSelectedItem());
+        }
+    }
+
+//    TVMembers tvMembers = new TVMembers();
+
+    public void getSelectedItem() throws IOException {
+
+        TVMembers tvMembers = tableview_Members.getSelectionModel().getSelectedItem();
+        System.out.println(tvMembers.getNum());
+
+
+    }
+
 }

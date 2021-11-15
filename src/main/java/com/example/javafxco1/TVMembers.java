@@ -21,6 +21,9 @@ public class TVMembers {
         this.sex = new SimpleStringProperty(sex);
     }
 
+    public TVMembers() {
+    }
+
     public String getCaisse() {
         return caisse.get();
     }
