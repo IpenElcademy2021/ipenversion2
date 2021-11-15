@@ -1,0 +1,15 @@
+.root {
+    -fx-background-color: "DBECDB";
+}
+
+#image_Office1 {
+ color:"MediumSeaGreen";
+ -fx-background-color: "MediumSeaGreen";
+ -fx-color="MediumSeaGreen"
+}
+
+#image_Office {
+ color:"MediumSeaGreen";
+ -fx-background-color: "MediumSeaGreen";
+ -fx-color="MediumSeaGreen"
+}

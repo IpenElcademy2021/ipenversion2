@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxco1.HelloController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <HBox spacing="15.0">
+                    <children>
+                        <Label prefHeight="54.0" prefWidth="162.0" text="iPension 1st" textFill="#30a9ff">
+                            <font>
+                                <Font name="Segoe Script" size="23.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="image_Home" fitHeight="55.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/home.png" />
+                            </image></ImageView>
+                        <ImageView fx:id="image_Office" fitHeight="56.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/office-building.png" />
+                     </image></ImageView>
+                        <ImageView fx:id="image_User" fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/user.png" />
+                            </image></ImageView>
+                        <ImageView fx:id="image_Office2" fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/office2.png" />
+                            </image></ImageView>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="image_Exit" fitHeight="59.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/power.png" />
+                            </image></ImageView>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="txtf_Username" promptText="Username" />
+                  <PasswordField fx:id="passwordfield_Password" promptText="Password" />
+                        <Region prefHeight="26.0" prefWidth="115.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="button_Login" mnemonicParsing="false" onAction="#login" text="Login" />
+                        <Button layoutX="309.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToScene2" text="Switch" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <TreeView fx:id="treeview_SideMenu" prefHeight="407.0" prefWidth="175.0" BorderPane.alignment="CENTER" />
+    </left>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Current status :">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Label>
+                <Region prefHeight="26.0" prefWidth="336.0" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Region>
+                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="Exit">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <Label text="NID:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <TextField />
+                        <Label layoutX="10.0" layoutY="10.0" text="Nom:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <TextField layoutX="10.0" layoutY="10.0" />
+                        <Label layoutX="10.0" layoutY="10.0" text="DOB:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <DatePicker prefHeight="26.0" prefWidth="140.0" />
+                        <Label layoutX="362.0" layoutY="10.0" text="DOD:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <DatePicker layoutX="418.0" layoutY="10.0" prefHeight="26.0" prefWidth="140.0" />
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Label text="Caisse:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <ComboBox prefWidth="150.0" />
+                        <Label text="Prenom">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <TextField layoutX="10.0" layoutY="10.0" />
+                        <Label layoutX="196.0" layoutY="10.0" text="Status:">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></Label>
+                        <CheckBox mnemonicParsing="false" text="Cotisant">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></CheckBox>
+                        <CheckBox mnemonicParsing="false" text="Non cotisant">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></CheckBox>
+                        <CheckBox layoutX="497.0" layoutY="10.0" mnemonicParsing="false" text="Dead">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></CheckBox>
+                        <CheckBox layoutX="572.0" layoutY="10.0" mnemonicParsing="false" text="Cancelled">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin></CheckBox>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Region prefHeight="30.0" prefWidth="750.0" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" text="Researcher">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_search_40px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                    </children>
+                </HBox>
+            <HBox>
+               <children>
+                      <TableView fx:id="tableview_Members" prefHeight="772.0" prefWidth="804.0" HBox.hgrow="ALWAYS">
+                          <columns>
+                              <TableColumn fx:id="tablecolumn_Caisse" prefWidth="75.0" text="Caisse" />
+                              <TableColumn fx:id="tablecolumn_NAVS" prefWidth="75.0" text="N* AVS" />
+                              <TableColumn fx:id="tablecolumn_Nom" prefWidth="75.0" text="Nom" />
+                              <TableColumn fx:id="tablecolumn_Prenom" prefWidth="75.0" text="Prenom" />
+                              <TableColumn fx:id="tablecolumn_DOB" prefWidth="75.0" text="Date de naissance" />
+                              <TableColumn fx:id="tablecolumn_Sexe" prefWidth="75.0" text="Sexe" />
+                              <TableColumn prefWidth="75.0" text="Natioalite" />
+                              <TableColumn prefWidth="75.0" text="Etat civil" />
+                              <TableColumn prefWidth="75.0" text="Code postal" />
+                              <TableColumn prefWidth="75.0" text="Localite" />
+                              <TableColumn prefWidth="75.0" text="Canton" />
+                              <TableColumn prefWidth="75.0" text="Statut" />
+                              <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Date de deces" />
+                          </columns>
+                      </TableView>
+                    <TextArea prefHeight="302.0" prefWidth="105.0" />
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
