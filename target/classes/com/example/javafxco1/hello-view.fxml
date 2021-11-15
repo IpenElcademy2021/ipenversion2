@@ -31,19 +31,19 @@
                                 <Font name="Segoe Script" size="23.0" />
                             </font>
                         </Label>
-                        <ImageView fx:id="image_Home" fitHeight="55.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="image_Home" fitHeight="55.0" fitWidth="118.0" onMouseClicked="#SwitchToFragment1" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/home.png" />
                             </image></ImageView>
-                        <ImageView fx:id="image_Office" fitHeight="56.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="image_Office" fitHeight="56.0" fitWidth="113.0" onMouseClicked="#SwitchToFragment2" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/office-building.png" />
                      </image></ImageView>
-                        <ImageView fx:id="image_User" fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="image_User" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#SwitchToFragment3" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/user.png" />
                             </image></ImageView>
-                        <ImageView fx:id="image_Office2" fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="image_Office2" fitHeight="59.0" fitWidth="59.0" onMouseClicked="#SwitchToFragment4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../../../../Users/RAU/Desktop/ico/office2.png" />
                             </image></ImageView>
@@ -97,7 +97,7 @@
         </HBox>
     </bottom>
     <center>
-        <VBox BorderPane.alignment="CENTER">
+        <VBox fx:id="vbox_fragment1" BorderPane.alignment="CENTER">
             <children>
                 <HBox>
                     <children>

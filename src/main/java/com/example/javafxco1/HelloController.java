@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,6 +31,9 @@ public class HelloController {
     private TableColumn tablecolumn_Caisse, tablecolumn_NAVS, tablecolumn_Nom, tablecolumn_Prenom, tablecolumn_DOB, tablecolumn_Sexe;
     @FXML
     private TableView tableview_Members;
+    @FXML
+    private VBox vbox_fragment1;
+
 
     Connection con;
     PreparedStatement prepstatment;
@@ -176,5 +180,24 @@ public class HelloController {
         stage.show();
     }
 
+    public void SwitchToFragment1() throws IOException {
+        VBox vBoxf1 = FXMLLoader.load((getClass().getResource("vBoxf1.fxml")));
+        vbox_fragment1.getChildren().setAll(vBoxf1);
+    }
+
+    public void SwitchToFragment2() throws IOException {
+        VBox vBoxf2 = FXMLLoader.load((getClass().getResource("vBoxf2.fxml")));
+        vbox_fragment1.getChildren().setAll(vBoxf2);
+    }
+
+    public void SwitchToFragment3() throws IOException {
+        VBox vBoxf3 = FXMLLoader.load((getClass().getResource("vBoxf3.fxml")));
+        vbox_fragment1.getChildren().setAll(vBoxf3);
+    }
+
+    public void SwitchToFragment4() throws IOException {
+        VBox vBoxf4 = FXMLLoader.load((getClass().getResource("vBoxf4.fxml")));
+        vbox_fragment1.getChildren().setAll(vBoxf4);
+    }
 
 }
